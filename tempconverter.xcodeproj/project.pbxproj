@@ -21,6 +21,7 @@
 		EC08D9B61881089B00DA8B96 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC08D9981881089B00DA8B96 /* UIKit.framework */; };
 		EC08D9BE1881089B00DA8B96 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC08D9BC1881089B00DA8B96 /* InfoPlist.strings */; };
 		EC08D9C01881089B00DA8B96 /* tempconverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC08D9BF1881089B00DA8B96 /* tempconverterTests.m */; };
+		EC08D9CB18810FC300DA8B96 /* TemperatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC08D9CA18810FC300DA8B96 /* TemperatureViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		EC08D9BB1881089B00DA8B96 /* tempconverterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tempconverterTests-Info.plist"; sourceTree = "<group>"; };
 		EC08D9BD1881089B00DA8B96 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EC08D9BF1881089B00DA8B96 /* tempconverterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tempconverterTests.m; sourceTree = "<group>"; };
+		EC08D9C918810FC300DA8B96 /* TemperatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperatureViewController.h; sourceTree = "<group>"; };
+		EC08D9CA18810FC300DA8B96 /* TemperatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				EC08D9AA1881089B00DA8B96 /* ViewController.m */,
 				EC08D9AC1881089B00DA8B96 /* Images.xcassets */,
 				EC08D99B1881089B00DA8B96 /* Supporting Files */,
+				EC08D9C918810FC300DA8B96 /* TemperatureViewController.h */,
+				EC08D9CA18810FC300DA8B96 /* TemperatureViewController.m */,
 			);
 			path = tempconverter;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 				EC08D9AB1881089B00DA8B96 /* ViewController.m in Sources */,
 				EC08D9A51881089B00DA8B96 /* AppDelegate.m in Sources */,
 				EC08D9A11881089B00DA8B96 /* main.m in Sources */,
+				EC08D9CB18810FC300DA8B96 /* TemperatureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
