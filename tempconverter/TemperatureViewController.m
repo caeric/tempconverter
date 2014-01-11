@@ -8,14 +8,20 @@
 
 #import "TemperatureViewController.h"
 
+const static float CELSIUS_FACTOR = 9.0f/5;
+const static float FAHRENHEIT_FACTOR = 5.0f/9;
+
 @interface TemperatureViewController ()
-- (IBAction)onViewTapped:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UITextField *fahrenheitTextField;
 @property (weak, nonatomic) IBOutlet UITextField *celsiusTextField;
 @property (weak, nonatomic) IBOutlet UIButton *convertButton;
+
+- (IBAction)onViewTapped:(id)sender;
+- (IBAction)onCelsiusClick:(id)sender;
 - (IBAction)onCelsiusValueChanged:(id)sender;
 - (IBAction)onFahrenheitValueChanged:(id)sender;
+- (IBAction)onFahrenheitClick:(id)sender;
 - (IBAction)convertButtonClicked:(id)sender;
 @end
 
@@ -37,17 +43,17 @@
     self.celsiusTextField.text = @"";
 }
 
+- (IBAction)onFahrenheitClick:(id)sender {
+    self.fahrenheitTextField.text = @"";
+}
+
 - (IBAction)convertButtonClicked:(id)sender {
     if (self. celsiusTextField.text.length > 0) {
         float celsius = [self.celsiusTextField.text floatValue];
-        float factor = 9.0f/5;
-        NSLog(@"%f", factor);
-        self.fahrenheitTextField.text = [NSString stringWithFormat:@"%f", celsius*factor+32] ;
+        self.fahrenheitTextField.text = [NSString stringWithFormat:@"%0.2f", celsius*CELSIUS_FACTOR+32] ;
     } else if (self.fahrenheitTextField.text.length > 0) {
-        float factor2 = 5.0f/9;
-                        NSLog(@"%f", factor2);
         float fahrenheit = [self.fahrenheitTextField.text floatValue] - 32;
-        self.celsiusTextField.text = [NSString stringWithFormat:@"%f", fahrenheit * factor2];
+        self.celsiusTextField.text = [NSString stringWithFormat:@"%0.2f", fahrenheit * FAHRENHEIT_FACTOR];
     }
 }
 
@@ -56,5 +62,9 @@
 }
 - (IBAction)onViewTapped:(id)sender {
     [self.view endEditing:YES];
+}
+
+- (IBAction)onCelsiusClick:(id)sender {
+    self.celsiusTextField.text = @"";
 }
 @end

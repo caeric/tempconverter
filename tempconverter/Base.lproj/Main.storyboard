@@ -50,6 +50,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
+                                    <action selector="onFahrenheitClick:" destination="D4h-4T-m5f" eventType="editingDidBegin" id="uC1-23-b7p"/>
                                     <action selector="onFahrenheitValueChanged:" destination="D4h-4T-m5f" eventType="editingChanged" id="y7q-jp-ORp"/>
                                 </connections>
                             </textField>
@@ -59,6 +60,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
+                                    <action selector="onCelsiusClick:" destination="D4h-4T-m5f" eventType="editingDidBegin" id="htO-G2-sfP"/>
                                     <action selector="onCelsiusValueChanged:" destination="D4h-4T-m5f" eventType="editingChanged" id="F8s-Sr-Dla"/>
                                 </connections>
                             </textField>
