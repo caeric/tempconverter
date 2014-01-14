@@ -31,6 +31,8 @@ const static float FAHRENHEIT_FACTOR = 5.0f/9;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.fahrenheitTextField.delegate = self;
+    self.celsiusTextField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,4 +69,13 @@ const static float FAHRENHEIT_FACTOR = 5.0f/9;
 - (IBAction)onCelsiusClick:(id)sender {
     self.celsiusTextField.text = @"";
 }
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    if (textField == self.fahrenheitTextField) {
+        [self onFahrenheitValueChanged:textField];
+    } else if (textField == self.celsiusTextField) {
+        [self onCelsiusValueChanged:textField];
+    }
+}
+
 @end
